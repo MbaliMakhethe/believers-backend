@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* The signature motif: a garment care-tag with a dashed "stitched" edge
+     and two small punch holes, like a label sewn into a collar. */
+  .stitch-tag {
+    @apply relative bg-paper-tag border border-dashed border-ink/30 rounded-tag;
+  }
+  .stitch-tag::before,
+  .stitch-tag::after {
+    content: "";
+    @apply absolute w-1.5 h-1.5 rounded-full bg-paper border border-ink/30;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .stitch-tag::before {
+    left: -4px;
+  }
+  .stitch-tag::after {
+    right: -4px;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-ink text-paper px-5 py-2.5 text-sm font-medium tracking-wide hover:bg-sky-700 transition-colors rounded-tag disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 border border-ink text-ink px-5 py-2.5 text-sm font-medium tracking-wide hover:bg-ink hover:text-paper transition-colors rounded-tag disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .input {
+    @apply w-full border border-ink/20 rounded-tag px-4 py-2.5 font-body text-sm bg-paper focus:outline-none focus:border-sky-500;
+  }
+  .card {
+    @apply bg-paper border border-ink/10 rounded-tag p-6;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-tag text-xs font-medium;
+  }
+  .badge-pending {
+    @apply badge bg-amber-50 text-amber-700;
+  }
+  .badge-approved {
+    @apply badge bg-emerald-50 text-emerald-700;
+  }
+  .badge-rejected {
+    @apply badge bg-red-50 text-red-700;
+  }
+}
