@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "medusa build",
+    "build": "npx medusa build",
     "dev": "medusa develop",
     "start": "medusa start"
   },
