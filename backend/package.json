@@ -5,8 +5,7 @@
   "scripts": {
     "build": "medusa build",
     "dev": "medusa develop",
-    "start": "medusa start",
-    "seed": "medusa exec ./src/scripts/seed.ts"
+    "start": "medusa start"
   },
   "dependencies": {
     "@medusajs/admin-sdk": "^2.4.0",
