@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "medusa build",
+    "build": "medusa build && cp medusa-config.ts dist/medusa-config.js",
     "dev": "medusa develop",
     "start": "medusa start",
     "seed": "medusa exec ./src/scripts/seed.ts"
