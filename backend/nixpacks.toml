@@ -2,12 +2,11 @@
     aptPkgs = ["libatomic1"]
 
     [phases.install]
-    cmds = ["npm ci --omit=dev"]
+    cmds = ["npm install"]
 
     [start]
-    cmd = "npm run start"
+    cmd = "npm start"
 
     [variables]
-    NODE_VERSION = "18.17.0"
     NODE_ENV = "production" 
-    NIXPACKS_PKG_MANAGERS = "npm"
+    NIXPACKS_PRO_MANAGERS = "npm"
