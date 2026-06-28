@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "@medusajs/admin-sdk": "^2.4.0",
+    "@medusajs/cli": "^2.17.1",
     "@medusajs/framework": "^2.4.0",
     "@medusajs/medusa": "^2.4.0",
     "pg": "^8.11.3",
     "stripe": "^16.8.0"
   },
   "devDependencies": {
-  "@medusajs/cli": "^2.17.1",
-  "@types/node": "^26.0.0",
+    "@types/node": "^26.0.0",
     "install": "^0.13.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
