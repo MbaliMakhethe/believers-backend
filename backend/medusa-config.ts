@@ -1,14 +1,16 @@
-import { defineConfig } from '@medusajs/utils'
+import { loadEnv, defineConfig } from "@medusajs/framework/utils"
+
+loadEnv(process.env.NODE_ENV || "development", process.cwd())
 
 export default defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     http: {
-      storeCors: "http://localhost:8000",
-      adminCors: "http://localhost:7001",
-      authCors: "http://localhost:7001",
-      jwtSecret: "supersecret",
-      cookieSecret: "supersecret"
-    }
-  }
+      storeCors: process.env.STORE_CORS!,
+      adminCors: process.env.ADMIN_CORS!,
+      authCors: process.env.AUTH_CORS!,
+      jwtSecret: process.env.JWT_SECRET || "supersecret",
+      cookieSecret: process.env.COOKIE_SECRET || "supersecret",
+    },
+  },
 })
