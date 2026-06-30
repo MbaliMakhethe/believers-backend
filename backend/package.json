@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "npx --yes medusa build",
+    "build": "medusa build",
     "dev": "medusa develop",
-    "start": "node_modules/.bin/medusa start"
+    "start": "medusa start"
   },
   "dependencies": {
     "@medusajs/admin-sdk": "^2.4.0",
@@ -13,16 +13,13 @@
     "@medusajs/framework": "^2.4.0",
     "@medusajs/medusa": "^2.4.0",
     "pg": "^8.11.3",
-    "stripe": "^16.8.0",    
+    "stripe": "^16.8.0",
     "typescript": "^5.9.3"
-   
-
   },
   "devDependencies": {
     "@types/node": "^26.0.0",
     "install": "^0.13.0",
-    "ts-node": "^10.9.2",    
-
+    "ts-node": "^10.9.2"
   },
   "engines": {
     "node": ">=20"
